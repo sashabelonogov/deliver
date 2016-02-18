@@ -80,8 +80,9 @@ module Deliver
           if file_path.downcase.include?("_framed.")
             # That's cool
           else
-            if file_path.downcase.include?("watch")
-              # Watch doesn't support frames (yet)
+            if file_path.downcase.include?("watch") || file_path.downcase.include?("iPhone4s")
+              # Watch doesn't support frames (yet).
+              # iPhone4s support is discontinued but at least is allows uploading screenshots that are not framed
             else
               # That might not be cool... if that screenshot is not framed but we only want framed
               next if prefer_framed
