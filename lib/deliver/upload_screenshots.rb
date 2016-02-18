@@ -82,7 +82,6 @@ module Deliver
             # That's cool
           else
             if file_path.downcase.include?("watch") || file_path.include?("iPhone4s")
-                UI.message(file_path)
               # Watch doesn't support frames (yet).
               # iPhone4s support is discontinued but at least allow uploading screenshots that are not framed
             else
