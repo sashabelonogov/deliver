@@ -77,12 +77,13 @@ module Deliver
 
         language = File.basename(lng_folder)
         files.each do |file_path|
+            
+            UIMessage(file_path)
+            
           if file_path.downcase.include?("_framed.")
             # That's cool
           else
             if file_path.downcase.include?("watch") || file_path.downcase.include?("iPhone4s")
-                UIMessage("found something")
-                UIMessage(file_path)
               # Watch doesn't support frames (yet).
               # iPhone4s support is discontinued but at least is allows uploading screenshots that are not framed
             else
